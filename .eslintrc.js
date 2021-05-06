@@ -14,11 +14,6 @@ module.exports = {
     // must be last to allow it to override other configs
     "prettier",
   ],
-  parser: "@typescript-eslint/parser",
-  parserOptions: {
-    tsconfigRootDir: __dirname,
-    project: ["./tsconfig.json"],
-  },
   plugins: ["import"],
   rules: {
     "no-alert": "error",
@@ -64,6 +59,11 @@ module.exports = {
           "error",
           { argsIgnorePattern: "^_" },
         ],
+      },
+      parser: "@typescript-eslint/parser",
+      parserOptions: {
+        tsconfigRootDir: __dirname,
+        project: ["./tsconfig.json"],
       },
     },
   ],
